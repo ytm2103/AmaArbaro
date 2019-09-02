@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // 後でモデルとコントローラ確認
+    // public function donations()
+    // {
+    //     return $this->hasMany('App\Donation');
+    // }
 }
