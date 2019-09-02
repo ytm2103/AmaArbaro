@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+# Instagram login
+Route::get('/instagram/', 'InstagramController@instagramLogin');
+
+# Instagram callback
+Route::get('/instagram/callback/', 'InstagramController@instagramCallback');

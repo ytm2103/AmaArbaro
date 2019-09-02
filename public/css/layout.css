@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+.header{
+    justify-content: space-between;
+    display: flex;
+  }
+  /*ヘッダー左側*/
+  
+  .header-left  {
+    display: flex;
+    color: #37654E;
+    align-items: center;
+  }
+  
+  .ticon{
+    height: 60px;
+    padding: 15px 0px 25px 10px;
+  }
+  
+  .name{
+    text-align:left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    padding-right: 10px;
+    padding-left: 15px;
+    
+  }
+  .zero{
+    /*ボーダー*/
+    border-left: solid 1px;
+    padding-left: 15px;
+    font-size: 15px;
+  }
+  
+  /*ヘッダー右側*/
+  .header-right{
+    display: flex;
+    color: #37654E;
+    align-items: center;
+  
+  }
+  
+  #icon{
+    height: 50px;
+    padding-right: 30px;
+  }
+  
+  
+  
+  .about{
+  padding-right: 20px;
+    border-right: solid 1px;
+    padding-left: 10px;
+  }
+  
+  .log{
+  padding-right: 20px;
+  }
+  
+  /*アイコンのホバー動作*/
+  /* twitter画像をホバーした */
+  img.twitter_button:hover{
+   
+      /* 透明度を上げることで、画像の色を薄く見せる。*/
+      opacity:0.5;
+   
+      /* リンクをホバーしたときのカーソルにする。*/
+      cursor: pointer;
+  }
+   
+  /* twitter画像をクリックした瞬間 */
+  img.twitter_button:active{
+   
+      /* 要素を若干下に下げることで、押した感じを出す。*/
+   
+      /* 今いる位置から相対的に3px下に配置する。*/
+      position: relative;
+      top: 3px;
+   
+  }
+  /*facebook*/
+  img.facebook_button:hover{
+   
+      /* 透明度を上げることで、画像の色を薄く見せる。*/
+      opacity:0.5;
+   
+      /* リンクをホバーしたときのカーソルにする。*/
+      cursor: pointer;
+  }
+   
+  /* twitter画像をクリックした瞬間 */
+  img.facebook_button:active{
+   
+      /* 要素を若干下に下げることで、押した感じを出す。*/
+   
+      /* 今いる位置から相対的に3px下に配置する。*/
+      position: relative;
+      top: 3px;
+   
+  }
+  
+  /*instagram*/
+  img.instagram_button:hover{
+   
+      /* 透明度を上げることで、画像の色を薄く見せる。*/
+      opacity:0.5;
+   
+      /* リンクをホバーしたときのカーソルにする。*/
+      cursor: pointer;
+  }
+   
+  /* twitter画像をクリックした瞬間 */
+  img.instagram_button:active{
+   
+      /* 要素を若干下に下げることで、押した感じを出す。*/
+   
+      /* 今いる位置から相対的に3px下に配置する。*/
+      position: relative;
+      top: 3px;
+   
+  }
+  /*hover処理はここまで*/
+  
+  
+  
+  
+  /*ここからモーダル表示*/
+  body {
+    position:relative;
+  }
+  a {
+    display:flex;
+    margin:auto;
+    text-align:center;
+    color: #37654E;
+    text-decoration:none;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .modal {
+    position:absolute;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+    display:none;
+  }
+  /*モーダルウィンドウの時のオーバーレイ*/
+  .overLay {
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgba(200,200,200,0.9);
+    width:100%;
+    height:100vh;
+    z-index:10;
+  }
+  /*`モーダルウィンドウの中身*/
+  .inner{
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    z-index:11;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+  }
+  /*ここまでがモーダル表示*/
+  /*画像*/
+  .tree{
+    height: 800px;
+    background-color: white;
+    max-width: 50%;
+    padding-left: 350px;
+  }
+  
+  
+  /*footer*/
+  .footer{
+   display: flex;
+   text-align: center;
+   color: #37654E;
+   padding-left: 500px;
+  }
+  
+
+
+/*ここから*/
+  html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
