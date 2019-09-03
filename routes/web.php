@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('AbooutUs', 'ContactController@index')->name('contact');
+Route::post('/contact/thanks', 'ContactController@thanks');
+Route::post('/contact/thanks', 'ContactController@store')->name('contact.thanks'); // 保存処理
 
+
+// Route::get('/', 'AboutUs@index')->name('diary.index');
 Route::get('/', function () {
-    return view('welcome');
-});
+     return view('AboutUs');
+ });
