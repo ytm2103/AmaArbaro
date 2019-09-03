@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.layouts')
 
 @section('title','お問い合わせ送信完了')
 

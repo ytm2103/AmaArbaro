@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+@extends('layouts.layouts')
+
+@section('title','contact')
+
+@section('content')
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,55 +12,20 @@
     <link rel="stylesheet" href="/css/app.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
 
-    
+     -->
     <!-- Styles -->
     <style>
         .row{
 
             display: flex;
             justify-content: center;
-
+            font-family: 'Roboto', sans-serif;
+            color: #37654E
         }
-        .vision{
+        .about_us,.vision,.mission,.h1{
 
-            display: flex;
-            justify-content: center;
-            font-size: 4em;
-            margin-block-start: 0.83em;
-            margin-block-end: 0.83em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-weight: bold;
-
-        }
-        .mission{
-
-            display: flex;
-            justify-content: center;
-            font-size: 4em;
-            margin-block-start: 0.83em;
-            margin-block-end: 0.83em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-weight: bold;
-            
-        }
-
-        .col-sm-3 p-3 image{
-
-            display: flex;
-            justify-content: center;
-            margin-block-start: 0.83em;
-            margin-block-end: 0.83em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-
-        }
-
-        .about_us{
-            
             display: flex;
             justify-content: center;
             font-size: 2.8em;
@@ -66,8 +36,36 @@
             font-weight: bold;
 
         }
+        /* .mission{
 
-        .about_us_content{
+            display: flex;
+            justify-content: center;
+            font-size: 4em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold; */
+            
+        /* } */
+
+        .col-sm-6 image{
+
+            display: flex;
+            justify-content: center;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+
+        }
+
+        .grid-img{
+            width: 100%
+        }
+
+       
+        .about_us_content,.vision_content,.mission_content{
 
             display: flex;
             justify-content: center;
@@ -80,6 +78,13 @@
 
 
         }
+
+        .btn-primary {
+            background: #37654E; //ボタンの背景色
+            /* color: 好きな色; //ボタンのテキストの色 */
+}
+
+
         
     </style>
     <title>About Us</title>
@@ -88,40 +93,52 @@
     
     <div class="container">
     　<div class="row">
-        <div class="col-sm-3 p-3">
-            <h2 class="vision">Vision</h2>
-            <p class="vision_content">Make donations/contribution with ZERO price</p>
+        <div class="col-sm-6">
+            <h2 class="about_us">About us</h2>
+            <p class="about_us_content">AMA ARBARO IS NON-GOVERMENTAL ORGANIZATION WITH A FOCUS ON GLOBAL REFORESTATION.<br>
+        We pool the donations for each project and send the funds to our partners.</p>
         </div>
-        <div class="col-sm-3 p-3 image">
-            <img src="../images/batsu.jpeg">
+        <div class="col-sm-6 image">
+            <img src="../images/AboutUs.png" alt class="grid-img"">
         </div>
-        <div class="col-sm-3 p-3">
+        <div class="col-sm-6 image">
+            <img src="../images/vision.png" alt class="grid-img"">
+        </div>
+        <div class="col-sm-6">
+            <h3 class="vision">Vision</h3>
+            <p class="vision_content">Make donations/contribution with ZERO price.</p>
+        </div>
+        <div class="col-sm-6">
             <h3 class="mission">Mission</h3>
-            <p class="mission_content">We're on a mission to make it simple for anyone to help the environment.</p>
-        </div>
+            <p class="mission_content">We're on a mission to make it simple for anyone to help the environment.
+            
 
+As an environmental charity, we aim to make it easier for individuals to be interested in environmental issues and to make donations (including sharing news) on a daily basis.
+            </p>
+        </div>
+        <div class="col-sm-6 image">
+            <img src="../images/mission.png" alt class="grid-img">
+        </div>
         
+
+        </div> 
       </div>
 
-      <div>
-        <h4 class="about_us">About us</h4>
-        <p class="about_us_content">AMA ARBARO IS NON-GOVERMENTAL ORGANIZATION WITH A FOCUS ON GLOBAL REFORESTATION.<br>
-        We pool the donations for each project, and you can </p>
+      
 
+       
 
-        @extends('layouts.layouts')
-
-        @section('title','contact')
-
-        @section('content')
+        <br></br>
+        <br></br>
         <div class="row">
            <h1>Contact us</h1>
         </div>
         <div class="row">
-           <form action="contact/confirm" method="post">
+           <form action="contact/thanks" method="post">
+           
             <div class="form-group">
                 <label for="InputEmail">E-mail</>
-                <input type="email" name="email" class="form-control" id="InputEmail" value="{{ old('email') }}">
+                <input type="email" name="email" class="form-control" cols="40" rows="4" id="InputEmail" value="{{ old('email') }}">
                 @if($errors->has('email'))
                     <p class="text-danger">{{ $errors->first('email')}}</p>
                 @endif
@@ -143,7 +160,7 @@
                 @endif
             </div>
                @csrf
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">SUBMIT</button>
+              <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#exampleModal">SUBMIT</button>
               <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -155,7 +172,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -167,30 +184,6 @@
             </form>
         </div>
         @endsection
-
-
-
-        
-
-<!-- 　　　　　　　
-           <div id="faq_csv_modal_window">
-           {{-- モーダルウィンドウ --}}
-           @include('modal_window')
-           @section('modal_window')
-           <div id="modal_open">
-           <header id="modal_header">
-            モーダルヘッダーです。
-           </header>
-           <main id="modal_main">
-
-           </main>
-           <footer id="modal_footer">
-           <p><a id="modal-close" class="button-link">閉じる</a></p>
-           </footer>
-          </div>
-          @endsection
-          @yield('modal_window')
-        </div> --> -->
 
     </div>
 
