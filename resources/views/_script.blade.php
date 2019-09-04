@@ -1,5 +1,6 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
+
 $(function(){  
 
 // モーダルウィンドウが開くときの処理    
@@ -13,11 +14,17 @@ $(".modalOpen").click(function(){
     return false;
 });
 
+
 // モーダルウィンドウが閉じるときの処理    
 $(".modalClose").click(function(){
     $(this).parents(".modal").fadeOut();
     $(".modalOpen").removeClass("open");
     return false;
 });  
-});
+
+
+
+    });
+
+
 </script>

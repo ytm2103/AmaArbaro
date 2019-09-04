@@ -4,7 +4,7 @@
 
 
     <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
         <!-- Fonts -->
         <!--<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">-->
         <!--google font-->
@@ -34,20 +34,21 @@
             <a href="https://www.facebook.com/sharer/sharer.php?u="><img src="{{ asset('/img/logo_facebook.png')}}" id="icon" class="facebook_button" ontouchstart=""></a>
             <a href="{{url('/instagram/')}}"><img src="{{ asset('/img/logo_instagram.png')}}" id="icon"  class="instagram_button" ontouchstart=""></a>
                 <div class="about">About us</div>
-                <!-- モーダルウィンドウを開くボタン -->
-                <div><a href="#modal01" class="modalOpen">My page</a></div>
-                 <!-- モーダルウィンドウ -->
-                <div class="modal" id="modal01">
-
-                <!-- モーダルウィンドウが開いている時のオーバーレイ -->
-                <div class="overLay modalClose"></div>
-
-                <!-- モーダルウィンドウの中身 -->
-                <div class="inner">モーダルウィンドウ
-                <a href="" class="modalClose">Close</a>
-                </div> 
-             </div>
-                <div class="log">Logout</div>
+            
+             <div>
+                @if (Route::has('login'))
+                    <div class="menu">
+                        @auth
+                            <a href="{{ url('/home') }}">My page</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Sign up</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
+                </div>
             </div>
         </div> 
     </header>
@@ -55,11 +56,11 @@
             @yield('content')
         </main>
 
-        <footer>
+    <footer>
         <div class="footer">
-         <p class="terms"><a href="">Terms of use</a></p>
-          <p class="policy"><a href="">Privacy policy</a></p>
-         <p class="ama">(c) 2019  Ama Arbaro</p>
+         <a id="foot" href="">Terms of use</a>
+         <a id="foot" href="">Privacy policy</a>
+         <p id="foot" class="ama">(c) 2019  Ama Arbaro</p>
         </div> 
     </footer> 
     </body>

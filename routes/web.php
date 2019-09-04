@@ -19,3 +19,7 @@ Route::get('/instagram/', 'InstagramController@instagramLogin');
 
 # Instagram callback
 Route::get('/instagram/callback/', 'InstagramController@instagramCallback');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

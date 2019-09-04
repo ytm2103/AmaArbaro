@@ -11,40 +11,9 @@
     line-height:normal
 }
 
-
-  .modal{
-    display:none;
-    height:100vh;
-    position:fixed;
-    top: 0;
-    width: 100%;
-  }
-  
   /*背景のCSS*/
-  .overLay {
-    position:absolute;
-    top:0;
-    left:0;
-    background:rgba(200,200,200,0.9);
-    width:100%;
-    height:100vh;
-    z-index:10;
-  }
-  
-  #modal01 .inner{
-    background: #fff;
-    left: 50%;
-    padding: 40px;
-    /*下記４行でモーダルをセンターに持ってこれる*/
-    position: absolute;
-    z-index:11;/*奥行きと前*/
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 50%;
-  }
-  
+
   .modalClose{
-    color:black;
     position: absolute;
     top: 5px;
     right: 10px;
@@ -54,10 +23,26 @@
   .button02{
     display: inline-block; 
     width:200px;
-    margin:20px auto 0;
+    margin:30px auto 0;
     text-align:center;
     color:#fff;
-    background:#000;
+    background:#37654E;
     text-decoration:none;
     padding:15px 0;
+    font-family: 'Roboto', sans-serif;
   }
+
+
+
+
+.modalBody {
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    height: 400px;
+}
