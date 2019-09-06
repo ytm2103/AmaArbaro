@@ -1,0 +1,48 @@
+/*imgの画像*/
+.container{
+    line-height:300px;
+    background-color:#fec;
+    text-align:center;
+}
+
+.container .tree {
+    display:inline-block;
+    vertical-align: middle;
+    line-height:normal
+}
+
+  /*背景のCSS*/
+
+  .modalClose{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .button02{
+    display: inline-block; 
+    width:200px;
+    margin:30px auto 0;
+    text-align:center;
+    color:#fff;
+    background:#37654E;
+    text-decoration:none;
+    padding:15px 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+
+
+.modalBody {
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    height: 400px;
+}
