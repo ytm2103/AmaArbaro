@@ -16,7 +16,7 @@ class CreateDonationsTable extends Migration
         Schema::create('donations', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('amount');
-            $table->timestamps();
+            $table->timestamp('created_at');
             $table->integer('user_id');
             $table->integer('project_id');
         });

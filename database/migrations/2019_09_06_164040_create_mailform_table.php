@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMailTable extends Migration
+class CreateMailformTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateMailTable extends Migration
      */
     public function up()
     {
-        Schema::create('mail', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create('mailform', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name', 255);
+            $table->string('email', 255);
+            $table->text('message');
+            $table->timestamp('created_at');
         });
     }
 
@@ -26,6 +29,6 @@ class CreateMailTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mail');
+        Schema::dropIfExists('mailform');
     }
 }
