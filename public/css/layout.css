@@ -218,68 +218,7 @@
     color: #37654E;
     }
   }
-  .modal {
-    position: fixed;
-    width: 100%;
-    min-height: 100%;
-    top:0;
-    left:0;
-    display:none;
-    background:rgba(200,200,200,0.9);
-  }
-  /*モーダルウィンドウの時のオーバーレイ*/
-  .overLay {
-    display: none;
-    position: fixed;
-    top:0;
-    left:0;
-    background:rgba(200,200,200,0.9);
-    width:100%;
-    height:100vh;
-    z-index:10;
-  }
-  /*`モーダルウィンドウの中身*/
-
-  @media only screen and (min-width:360px) {  /* 中画面 */
-    .inner {
-    background: #fff;
-    left: 50%;
-    padding: 80px 40px;
-    /*下記４行でモーダルをセンターに持ってこれる*/
-    position: absolute;
-    z-index:11;/*奥行きと前*/
-    top: 40%;
-    transform: translate(-50%,-40%);
-    max-width: 50%;
-    }
-  }
-  @media only screen and (min-width:600px) {  /* 大画面 */
-    .inner {
-      background: #fff;
-      left: 50%;
-      padding: 80px 40px;
-      /*下記４行でモーダルをセンターに持ってこれる*/
-      position: absolute;
-      z-index:11;/*奥行きと前*/
-      top: 50%;
-      transform: translate(-50%,-40%);
-      max-width: 50%;
-    }
-  }
-
-  @media only screen and (min-width:800px) {  /* 大画面 */
-    .inner {
-      background: #fff;
-      left: 50%;
-      padding: 80px 40px;
-      /*下記４行でモーダルをセンターに持ってこれる*/
-      position: absolute;
-      z-index:11;/*奥行きと前*/
-      top: 50%;
-      transform: translate(-50%,-40%);
-      max-width: 30%;
-    }
-  }
+ 
   /*ここまでがモーダル表示*/
   /*画像*/
   .tree{

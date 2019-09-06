@@ -15,6 +15,7 @@
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
 
+
         @include('._script')
 
         <title>AmaArbaro @yield('title')</title>
@@ -24,16 +25,15 @@
         <div class="header">
            <!--ヘッダー左側部分-->
            <div class="header-left">
-               <img src="{{ asset('/img/logo.png')}}" class="ticon">
+              <a href="http://localhost:8000/"><img src="{{ asset('/img/logo.png')}}" class="ticon"></a>
                <div class="name">Ama Arbaro</div>
                <div class="zero">Make donations/contributions<br>with ZERO price</div>
             </div>
             <!--ヘッダー右側部分-->
             <div class="header-right">
-            <a href="http://twitter.com/share?url="><img src="{{ asset('/img/logo_twitter.png')}}" id="icon" class="twitter_button" ontouchstart=""></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u="><img src="{{ asset('/img/logo_facebook.png')}}" id="icon" class="facebook_button" ontouchstart=""></a>
-            <a href="{{url('/instagram/')}}"><img src="{{ asset('/img/logo_instagram.png')}}" id="icon"  class="instagram_button" ontouchstart=""></a>
-                <div class="about">About us</div>
+            <a href="http://twitter.com/share?url=https://www.youtube.com"><img src="{{ asset('/img/logo_twitter.png')}}" id="icon" class="twitter_button" ontouchstart=""></a>
+            <a href="http://www.facebook.com/share.php?u=https://www.youtube.com"><img src="{{ asset('/img/logo_facebook.png')}}" id="icon" class="facebook_button" ontouchstart=""></a>
+                <a href=""><div class="about">About us</div></a>
             
              <div>
                 @if (Route::has('login'))
