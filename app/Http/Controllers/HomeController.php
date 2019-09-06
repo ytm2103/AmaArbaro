@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Donation; 
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //diariesテーブルのデータを全件取得
+        //useしてるDiaryのallメソッドを実施
+        //all()はテーブルのデータを全て取得するメソッド
+        $donations = Donation::all(); 
+        return view('home', ['donations' => $donations]);
+        // dd($diaries);  //var_dump()とdie()を合わせたメソッド。変数の確認 + 処理のストップ
     }
 }
