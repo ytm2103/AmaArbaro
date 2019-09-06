@@ -7,6 +7,6 @@ anime({
     // loop: true,
     // direction: "alternate",
     delay: (el, i) => {
-      return i * 200;
+      return i * 30;
     }
 });
