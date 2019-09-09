@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMailformTable extends Migration
+class CreateQuestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMailformTable extends Migration
      */
     public function up()
     {
-        Schema::create('mailform', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 255);
             $table->string('email', 255);
@@ -29,6 +29,6 @@ class CreateMailformTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mailform');
+        Schema::dropIfExists('questions');
     }
 }

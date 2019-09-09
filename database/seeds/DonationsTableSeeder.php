@@ -13,7 +13,7 @@ class DonationsTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {        
         $donations = [
             [
                 'id' => '1',

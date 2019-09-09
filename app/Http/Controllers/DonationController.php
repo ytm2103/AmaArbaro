@@ -10,8 +10,8 @@ class DonationController extends Controller
         //diariesテーブルのデータを全件取得
         //useしてるDiaryのallメソッドを実施
         //all()はテーブルのデータを全て取得するメソッド
-        $diaries = Diary::all(); 
-
-        dd($diaries);  //var_dump()とdie()を合わせたメソッド。変数の確認 + 処理のストップ
+        // $donations = Donation::all(); 
+        // dd($donations); 
+        //var_dump()とdie()を合わせたメソッド。変数の確認 + 処理のストップ
     }
 }
