@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Donation; 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,11 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //diariesテーブルのデータを全件取得
-        //useしてるDiaryのallメソッドを実施
+        //donationsテーブルのデータを全件取得
+        //useしてるDonationのallメソッドを実施
         //all()はテーブルのデータを全て取得するメソッド
-        $donations = Donation::all(); 
-        return view('home', ['donations' => $donations]);
-        // dd($diaries);  //var_dump()とdie()を合わせたメソッド。変数の確認 + 処理のストップ
+        // $donations = Donation::find(1)->donations;
+        // $user = $request->user();
+        // $donations = $user->load('donations');
+        // return view('home', ['donations' => $donations->donations]);
+        $user = Auth::user();
+        $donations = $user->donations()->orderBy('id')->get();
+        return view('home', ['donations' => $donations], ['user' => $user]);
     }
 }

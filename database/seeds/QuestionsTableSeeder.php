@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Carbon\Carbon; // 追加
 use Illuminate\Support\Facades\DB; // 追加
 
-class MailformTableSeeder extends Seeder
+class QuestionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +13,7 @@ class MailformTableSeeder extends Seeder
      */
     public function run()
     {
-        $mailform = [
+        $questions = [
             [
                 'id' => '1',
                 'name'  => 'いけだあつし',
@@ -22,13 +22,13 @@ class MailformTableSeeder extends Seeder
             ],
         ];
 
-        foreach ($mailform as $value) {
+        foreach ($questions as $question) {
 
-            DB::table('mailform')->insert([
-                'id' => $value['id'],
-                'name' => $value['name'],
-                'email' => $value['email'],
-                'message' => $value['message'],
+            DB::table('questions')->insert([
+                'id' => $question['id'],
+                'name' => $question['name'],
+                'email' => $question['email'],
+                'message' => $question['message'],
                 'created_at' => Carbon::now(),
             ]);
         }

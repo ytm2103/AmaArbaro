@@ -13,21 +13,39 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                          <a class="nav-link active">History</a>
+                          <a href="#profile" class="nav-link active" data-toggle="tab">Profile</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link">My profile</a>
+                          <a href="#history" class="nav-link" data-toggle="tab">History</a>
                         </li>
                       </ul>
-                    @foreach ($donations as $donation)
-                    <div class="m-4 p-4 border border-primary">
-                        <p>No. {{ $donation->id }}</p>
-                        <p>Date : {{ $donation->created_at }}</p>
-                        <p>Amount : ${{ $donation->amount }}</p>
-                    </div>
-                    @endforeach
+                    
+                      <div class="tab-content">
+                        <div id="profile" class="tab-pane active">
+                            <div class="m-4 p-4 border border-primary">
+                                <p>Name: <input type="text" value="{{ $user->name }}"></p>
+                                <p>E-mail: <input type="text" value="{{ $user->email }}"></p>
+                                <p>Name: {{ $user->name }}</p>
+                                <p>E-mail: {{ $user->email }}</p>
+                                <p>Password: </p>
+                                <p>Delete</p>
+                            </div>
+                        </div>
+                        <div id="history" class="tab-pane">
+                            @foreach ($donations as $donation)
+                            <div class="m-4 p-4 border border-primary">
+                                <p>No. {{ $donation->id }}</p>
+                                <p>Date : {{ $donation->created_at }}</p>
+                                <p>Amount : ${{ $donation->amount }}</p>
+                            </div>
+                            @endforeach
+                        </div>
+                        </div>
+
+
                 </div>
             </div>
         </div>
