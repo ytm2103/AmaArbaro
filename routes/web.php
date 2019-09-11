@@ -25,4 +25,12 @@ Route::get('/news', function() {
 Route::get('/logout',[
     'uses' => 'UserController@getLogout',
     'as' => 'user.logout'
-    ]);
+]);
+
+Route::get('/terms', function() {
+    return view('terms');
+});
+
+Route::get('/privacy', function() {
+    return view('privacy');
+});

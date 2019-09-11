@@ -215,7 +215,7 @@ body {
   
 @media only screen and (min-width:860px) {  /* 大画面 */
   a {
-    display:flex;
+  display:flex;
   margin:auto;
   text-align:center;
   text-decoration:none;
@@ -246,4 +246,11 @@ body {
   color: #37654E;
   font-size: 1rem;
   justify-content: center;
+}
+
+/* 共通 */
+
+html, body{
+  font-family: 'Roboto', sans-serif;
+  color: #37654E;
 }

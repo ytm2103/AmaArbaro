@@ -1,12 +1,10 @@
-
-
 /*モーダルのxボタンの調整*/
-  .modalClose{
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
-  }
+.modalClose{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
 
 
 /*ここからモーダル*/
@@ -117,6 +115,26 @@
     float: none;
 }
 
+
+@media only screen and (min-width:360px) {  /* 中画面 */
+  a {
+    display:flex;
+    margin:auto;
+    text-align:center;
+    text-decoration:none;
+    padding-left: 10px;
+    color: #37654E;
+  }
 }
-
-
+  
+@media only screen and (min-width:860px) {  /* 大画面 */
+  a {
+  display:flex;
+  margin:auto;
+  text-align:center;
+  text-decoration:none;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #37654E;
+  }
+}

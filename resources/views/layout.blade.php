@@ -6,22 +6,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
-        <!--google font-->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
 
-        @include('._script')
+    @include('._script')
 
-        <title>AmaArbaro @yield('title')</title>
+    <title>AmaArbaro @yield('title')</title>
     </head>
     <body>
         <header>
         <div class="header">
            <!--ヘッダー左側部分-->
            <div class="header-left">
-              <a href="http://localhost:8000/"><img src="{{ asset('/img/logo.png')}}" class="ticon"></a>
+                <a href="http://localhost:8000/">
+                    <img src="{{ asset('/img/logo.png')}}" class="ticon">
+                </a>
                <div class="name">Ama Arbaro</div>
                <div class="zero"><a class="link" href="{{ url('/news') }}">Make donations/contributions<br>with ZERO price</a></div>
             </div>
@@ -55,8 +57,8 @@
 
     <footer class="mb-4 mt-5">
         <div class="footer">
-         <a id="foot" href="">Terms of use</a>
-         <a id="foot" href="">Privacy policy</a>
+         <a id="foot" href="{{ url('/terms') }}">Terms of use</a>
+         <a id="foot" href="{{ url('/privacy') }}">Privacy policy</a>
          <p id="foot" class="ama">&copy; 2019  Ama Arbaro</p>
         </div> 
     </footer> 
