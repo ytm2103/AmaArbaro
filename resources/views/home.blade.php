@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -16,35 +16,59 @@
                     
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                          <a href="#profile" class="nav-link active" data-toggle="tab">Profile</a>
+                           <a href="#profile" class="nav-link active" data-toggle="tab">Profile</a>
                         </li>
                         <li class="nav-item">
-                          <a href="#history" class="nav-link" data-toggle="tab">History</a>
+                           <a href="#history" class="nav-link" data-toggle="tab">History</a>
                         </li>
-                      </ul>
+                    </ul>
                     
-                      <div class="tab-content">
+                    <div class="tab-content">
                         <div id="profile" class="tab-pane active">
-                            <div class="m-4 p-4 border border-primary">
-                                <p>Name: <input type="text" value="{{ $user->name }}"></p>
-                                <p>E-mail: <input type="text" value="{{ $user->email }}"></p>
-                                <p>Name: {{ $user->name }}</p>
-                                <p>E-mail: {{ $user->email }}</p>
-                                <p>Password: </p>
-                                <p>Delete</p>
+                            <div class="m-4 p-4">
+                                <form action="" method="post" class="">
+                                    
+                                    @csrf
+                                    <div class="sub-title mb-2">Name</div>
+                                    <div class="form-group form-inline">
+                                        <input type="text" value="{{ old('name', $user->name) }}" class="form-control w-50"><button type="button" class="btn btn-green ml-4 w-25">Update</button>
+                                    </div>
+
+                                    <div class="sub-title mb-2">E-mail</div>
+                                    <div class="form-group form-inline mb-5">
+                                        <input type="text" value="{{ old('email', $user->email) }}" class="form-control w-50">
+                                        <button type="button" class="btn btn-green ml-4 w-25">Update</button>
+                                    </div>
+                                    
+                                    <div class="sub-title mb-2">Password</div>
+                                    <div class="form-group form-inline">
+                                        <input type="text" placeholder="Current Password" class="form-control w-50">
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <input type="text" placeholder="New Password" class="form-control w-50">
+                                    </div>
+                                    <div class="form-group form-inline mb-5">
+                                        <input type="text" placeholder="Confirm New Password" class="form-control w-50"><button type="button" class="btn btn-green ml-4 w-25">Update</button>
+                                    </div>
+                                    
+                                    <div class="mb-2 sub-title">Delete your account</div>
+                                    <div class="form-group form-inline">
+                                        <input type="text" placeholder="Current Password" class="form-control w-50">
+                                        <button type="button" class="btn btn-green ml-4 w-25">Delete</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <div id="history" class="tab-pane">
                             @foreach ($donations as $donation)
-                            <div class="m-4 p-4 border border-primary">
-                                <p>No. {{ $donation->id }}</p>
-                                <p>Date : {{ $donation->created_at }}</p>
-                                <p>Amount : ${{ $donation->amount }}</p>
+                            <div class="m-4 p-4 border-green">
+                                <p class="font-green"><span class="strong">No.</span> {{ $donation->id }}</p>
+                                <p class="font-green"><span class="strong">Date : </span>{{ $donation->created_at }}</p>
+                                <p class="font-green"><span class="strong">Amount : </span>${{ $donation->amount }}</p>
                             </div>
                             @endforeach
                         </div>
-                        </div>
-
+                    </div>
 
                 </div>
             </div>

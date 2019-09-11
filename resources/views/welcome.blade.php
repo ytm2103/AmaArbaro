@@ -1,6 +1,4 @@
-
-
-        @extends('layout')
+@extends('layout')
 
 @section('title')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -10,7 +8,9 @@
 <script defer src="{{ asset('/js/line.js') }}"></script>
 <!-- モーダルウィンドウを開くボタン -->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome.css') }}">
+
 @section('content')
+
 <div id="demoslide01" class="main_visual bg_aaa">
     <a data-target="modal1" class="modal_open"> <svg width=100% height=600px version="1.0" xmlns="http://www.w3.org/2000/svg"
     width="300.000000pt" height="348.000000pt" viewBox="0 0 300.000000 348.000000"
@@ -589,10 +589,10 @@
 
 <!-- モーダル1 -->
 <div id="modal1" class="modal_box">
-        <div class="overLay modalClose"> </div> 
-                <h2 id="make">Make your donations?</h2>
-                <div class="link_area">
-            <a href="" class="modalClose">×</a><!--デフォルトなどでリセットで消すか、単純に消すか。aタグ使うのやめるか-->
+    <div class="overLay modalClose"> </div> 
+    <h2 id="make">Make your donations?</h2>
+    <div class="link_area">
+        <a href="" class="modalClose">×</a><!--デフォルトなどでリセットで消すか、単純に消すか。aタグ使うのやめるか-->
         <div class="list">
             <div class="modal_link"><a href="http://localhost:8000/news" class="button02">$0</a></div><!--画面遷移されるのならaタグの方がいいか-->
             <div class="modal_link"><a data-target="modal2" class="modal_switch"><span>$1</span></a></div>
@@ -602,25 +602,16 @@
             <div class="modal_link"><a data-target="modal2" class="modal_switch"><span>$100</span></a></div>
         </div>   
         <a href="http://localhost:8000/login" id="log" >Log in your account.></a>
-   
- </div>
+    </div>
 </div>
 
 <!-- モーダル2 -->
-<div id="modal2" class="modal_box" >
- <div class="overLay modalClose"> </div> 
-    
+<div id="modal2" class="modal_box">
+    <div class="overLay modalClose"> </div> 
     <div class="link_area">
-        
-            <h2>決済画面（仮）</h2>
-            <a href="" class="modalClose">×</a>
-        <div>google pay</div>
-        
+        <h2>決済画面（仮）</h2>
+        <a href="" class="modalClose">×</a>
+        <div>google pay</div>  
     </div>
-    
-    </div>
-
-</body>
+</div>
 @endsection
-
-</html>
