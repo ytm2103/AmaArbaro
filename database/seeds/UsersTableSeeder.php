@@ -18,13 +18,13 @@ class UsersTableSeeder extends Seeder
                 'id' => '1',
                 'name'  => 'いけだあつし',
                 'email'  => 'ikeda@ikeda.com',
-                'password'  => Hash::make('ikeda'),
+                'password'  => Hash::make('ikedaikedaikeda'),
             ],
             [
                 'id' => '2',
                 'name'  => 'NexSeed',
                 'email'  => 'nex@seed.com',
-                'password'  => Hash::make('nexseed'),
+                'password'  => Hash::make('nexseednexseednexseed'),
             ],
         ];
 

@@ -21,3 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/news', function() {
     return view('news');
 });
+
+Route::get('/logout',[
+    'uses' => 'UserController@getLogout',
+    'as' => 'user.logout'
+    ]);
