@@ -13,9 +13,12 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
+
+Route::post('donation/store', 'DonationController@store')->name('donation.store'); // 保存処理
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/news', function() {
