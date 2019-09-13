@@ -26,20 +26,28 @@
                     <div class="tab-content">
                         <div id="profile" class="tab-pane active">
                             <div class="m-4 p-4">
-                                <form action="" method="post" class="">
-                                    
+                            <form action="{{ route('home.update.name', ['id' => $user->id]) }}" method="post" class="">
                                     @csrf
+                                    @method('put')
                                     <div class="sub-title mb-2">Name</div>
                                     <div class="form-group form-inline">
-                                        <input type="text" value="{{ old('name', $user->name) }}" class="form-control w-50"><button type="button" class="btn btn-green ml-4 w-25">Update</button>
+                                        <input type="text" value="{{ old('name', $user->name) }}" class="form-control w-50" name="name" id="name"><button type="submit" class="btn btn-green ml-4 w-25">Update</button>
                                     </div>
+                                </form>
 
+                                <form action="{{ route('home.update.email', ['id' => $user->id]) }}" method="post" class="">
+                                    @csrf
+                                    @method('put')
                                     <div class="sub-title mb-2">E-mail</div>
                                     <div class="form-group form-inline mb-5">
-                                        <input type="text" value="{{ old('email', $user->email) }}" class="form-control w-50">
-                                        <button type="button" class="btn btn-green ml-4 w-25">Update</button>
+                                        <input type="text" value="{{ old('email', $user->email) }}" class="form-control w-50" name="email" id="email">
+                                        <button type="submit" class="btn btn-green ml-4 w-25">Update</button>
                                     </div>
+                                </form>
                                     
+                                <form action="{{ route('home.update.email', ['id' => $user->id]) }}" method="post" class="">
+                                    @csrf
+                                    @method('put')
                                     <div class="sub-title mb-2">Password</div>
                                     <div class="form-group form-inline">
                                         <input type="text" placeholder="Current Password" class="form-control w-50">
@@ -48,15 +56,20 @@
                                         <input type="text" placeholder="New Password" class="form-control w-50">
                                     </div>
                                     <div class="form-group form-inline mb-5">
-                                        <input type="text" placeholder="Confirm New Password" class="form-control w-50"><button type="button" class="btn btn-green ml-4 w-25">Update</button>
+                                        <input type="text" placeholder="Confirm New Password" class="form-control w-50"><button type="submit" class="btn btn-green ml-4 w-25">Update</button>
                                     </div>
+                                </form>
                                     
+                                <form action="{{ route('home.update.email', ['id' => $user->id]) }}" method="post" class="">
+                                    @csrf
+                                    @method('put')
                                     <div class="mb-2 sub-title">Delete your account</div>
                                     <div class="form-group form-inline">
                                         <input type="text" placeholder="Current Password" class="form-control w-50">
-                                        <button type="button" class="btn btn-green ml-4 w-25">Delete</button>
+                                        <button type="submit" class="btn btn-green ml-4 w-25">Delete</button>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
                         <div id="history" class="tab-pane">
