@@ -18,6 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home', 'HomeController@store')->name('home'); // 保存処理
+
 Route::get('/news', function() {
     return view('news');
 });

@@ -25,13 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //donationsテーブルのデータを全件取得
-        //useしてるDonationのallメソッドを実施
-        //all()はテーブルのデータを全て取得するメソッド
-        // $donations = Donation::find(1)->donations;
-        // $user = $request->user();
-        // $donations = $user->load('donations');
-        // return view('home', ['donations' => $donations->donations]);
         $user = Auth::user();
         $donations = $user->donations()->orderBy('id')->get();
         return view('home', ['donations' => $donations], ['user' => $user]);
