@@ -45,6 +45,9 @@
                                     </div>
                                 </form>
                                     
+                                <form action="{{ route('home.update.email', ['id' => $user->id]) }}" method="post" class="">
+                                    @csrf
+                                    @method('put')
                                     <div class="sub-title mb-2">Password</div>
                                     <div class="form-group form-inline">
                                         <input type="text" placeholder="Current Password" class="form-control w-50">
@@ -55,12 +58,17 @@
                                     <div class="form-group form-inline mb-5">
                                         <input type="text" placeholder="Confirm New Password" class="form-control w-50"><button type="submit" class="btn btn-green ml-4 w-25">Update</button>
                                     </div>
+                                </form>
                                     
+                                <form action="{{ route('home.update.email', ['id' => $user->id]) }}" method="post" class="">
+                                    @csrf
+                                    @method('put')
                                     <div class="mb-2 sub-title">Delete your account</div>
                                     <div class="form-group form-inline">
                                         <input type="text" placeholder="Current Password" class="form-control w-50">
                                         <button type="submit" class="btn btn-green ml-4 w-25">Delete</button>
                                     </div>
+                                </form>
 
                             </div>
                         </div>
