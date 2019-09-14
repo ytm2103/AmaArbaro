@@ -15,15 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/news', function() {
+    return view('news');
+});
+
+Route::get('contact/form', function() {
+    return view('contact.form');
+});
+
 Auth::routes();
 
 Route::post('donation/store', 'DonationController@store')->name('donation.store'); // 保存処理
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/news', function() {
-    return view('news');
-});
+
 
 Route::get('/logout',[
     'uses' => 'UserController@getLogout',
@@ -37,3 +43,7 @@ Route::get('/terms', function() {
 Route::get('/privacy', function() {
     return view('privacy');
 });
+
+Route::get('contact', 'ContactController@index')->name('contact');
+Route::post('contact/confirm', 'ContactController@confirm')->name('confirm');
+Route::post('contact/sent', 'ContactController@sent')->name('sent');

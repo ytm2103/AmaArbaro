@@ -8,7 +8,6 @@
 
 
 <script defer src="{{ asset('/js/line.js') }}"></script>
-<script defer src="{{ asset('/js/donation.js') }}"></script>
 <!-- モーダルウィンドウを開くボタン -->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome.css') }}">
 @section('content')
