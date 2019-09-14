@@ -26,6 +26,7 @@
                     <div class="tab-content">
                         <div id="profile" class="tab-pane active">
                             <div class="m-4 p-4">
+
                             <form action="{{ route('home.update.name', ['id' => $user->id]) }}" method="post" class="">
                                     @csrf
                                     @method('put')
@@ -45,18 +46,19 @@
                                     </div>
                                 </form>
                                     
-                                <form action="{{ route('home.update.email', ['id' => $user->id]) }}" method="post" class="">
+                                <form action="{{ route('home.update.password', ['id' => $user->id]) }}" method="post" class="">
                                     @csrf
                                     @method('put')
                                     <div class="sub-title mb-2">Password</div>
                                     <div class="form-group form-inline">
-                                        <input type="text" placeholder="Current Password" class="form-control w-50">
+                                        <input type="text" placeholder="Current Password" class="form-control w-50" id="current_password" name="current_password">
                                     </div>
                                     <div class="form-group form-inline">
-                                        <input type="text" placeholder="New Password" class="form-control w-50">
+                                        <input type="text" placeholder="New Password" class="form-control w-50" id="new_password" name="new_password">
                                     </div>
                                     <div class="form-group form-inline mb-5">
-                                        <input type="text" placeholder="Confirm New Password" class="form-control w-50"><button type="submit" class="btn btn-green ml-4 w-25">Update</button>
+                                        <input type="text" placeholder="Confirm New Password" class="form-control w-50" id="confirm_password" name="confirm_password">
+                                        <button type="submit" class="btn btn-green ml-4 w-25">Update</button>
                                     </div>
                                 </form>
                                     

@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::put('/home/{id}/update_name', 'HomeController@updateName')->name('home.update.name'); // 保存処理
 Route::put('/home/{id}/update_email', 'HomeController@updateEmail')->name('home.update.email'); // 保存処理
+Route::put('/home/{id}/update_password', 'HomeController@updatePassword')->name('home.update.password'); // 保存処理
 
 Route::get('/news', function() {
     return view('news');

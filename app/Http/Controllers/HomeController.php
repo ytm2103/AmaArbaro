@@ -6,6 +6,8 @@ use App\Donation;
 use App\User; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -49,5 +51,32 @@ class HomeController extends Controller
         $user->save(); //DBに保存
 
         return redirect()->route('home'); //一覧ページにリダイレクト
+    }
+
+    public function updatePassword(int $id, Request $request)
+    {
+        
+        $user = User::find($id);
+
+        if (Hash::check($request->current_password, $user->password))
+        { 
+            if ($request->new_password == $request->confirm_password)
+            { 
+
+                $request->user()->fill([
+                    'password' => Hash::make($request->new_password)
+                ])->save();
+
+                // dd($request->new_password);
+                
+                return redirect()->route('home'); //一覧ページにリダイレクト
+
+            } else {
+                echo 'new_password or confirm_password error';
+            }
+        } else {
+            echo 'current_password error';
+        }
+
     }
 }
