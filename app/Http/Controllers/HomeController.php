@@ -7,7 +7,6 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -74,6 +73,22 @@ class HomeController extends Controller
             } else {
                 echo 'new_password or confirm_password error';
             }
+        } else {
+            echo 'current_password error';
+        }
+
+    }
+
+    public function deleteUser(int $id, Request $request)
+    {
+        
+        $user = User::find($id);
+
+        if (Hash::check($request->current_password, $user->password))
+        { 
+            $user->delete();
+            return redirect('/');
+            
         } else {
             echo 'current_password error';
         }
