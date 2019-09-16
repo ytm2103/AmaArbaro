@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 @section('content')
 <div class="container mt-4">
     <div class="row justify-content-center">
@@ -26,37 +30,66 @@
                     <div class="tab-content">
                         <div id="profile" class="tab-pane active">
                             <div class="m-4 p-4">
-                                <form action="" method="post" class="">
-                                    
+
+                                <script>
+                                    @if (session('update_message'))
+                                        $(function () {
+                                                toastr.success('{{ session('update_message') }}');
+                                        });
+                                    @endif
+                                </script>
+
+                                {{-- @if (session('update_message'))
+                                    <div class="update_message">
+                                        {{ session('update_message') }}
+                                    </div>
+                                @endif --}}
+                                
+                            <form action="{{ route('home.update.name', ['id' => $user->id]) }}" method="post" class="">
                                     @csrf
+                                    @method('put')
                                     <div class="sub-title mb-2">Name</div>
                                     <div class="form-group form-inline">
-                                        <input type="text" value="{{ old('name', $user->name) }}" class="form-control w-50"><button type="button" class="btn btn-green ml-4 w-25">Update</button>
-                                    </div>
-
-                                    <div class="sub-title mb-2">E-mail</div>
-                                    <div class="form-group form-inline mb-5">
-                                        <input type="text" value="{{ old('email', $user->email) }}" class="form-control w-50">
-                                        <button type="button" class="btn btn-green ml-4 w-25">Update</button>
-                                    </div>
-                                    
-                                    <div class="sub-title mb-2">Password</div>
-                                    <div class="form-group form-inline">
-                                        <input type="text" placeholder="Current Password" class="form-control w-50">
-                                    </div>
-                                    <div class="form-group form-inline">
-                                        <input type="text" placeholder="New Password" class="form-control w-50">
-                                    </div>
-                                    <div class="form-group form-inline mb-5">
-                                        <input type="text" placeholder="Confirm New Password" class="form-control w-50"><button type="button" class="btn btn-green ml-4 w-25">Update</button>
-                                    </div>
-                                    
-                                    <div class="mb-2 sub-title">Delete your account</div>
-                                    <div class="form-group form-inline">
-                                        <input type="text" placeholder="Current Password" class="form-control w-50">
-                                        <button type="button" class="btn btn-green ml-4 w-25">Delete</button>
+                                        <input type="text" value="{{ old('name', $user->name) }}" class="form-control w-50" name="name" id="name"><button type="submit" class="btn btn-green ml-4 w-25">Update</button>
                                     </div>
                                 </form>
+
+                                <form action="{{ route('home.update.email', ['id' => $user->id]) }}" method="post" class="">
+                                    @csrf
+                                    @method('put')
+                                    <div class="sub-title mb-2">E-mail</div>
+                                    <div class="form-group form-inline mb-5">
+                                        <input type="text" value="{{ old('email', $user->email) }}" class="form-control w-50" name="email" id="email">
+                                        <button type="submit" class="btn btn-green ml-4 w-25">Update</button>
+                                    </div>
+                                </form>
+                                    
+                                <form action="{{ route('home.update.password', ['id' => $user->id]) }}" method="post" class="">
+                                    @csrf
+                                    @method('put')
+                                    <div class="sub-title mb-2">Password</div>
+                                    <div class="form-group form-inline">
+                                        <input type="text" placeholder="Current Password" class="form-control w-50" id="current_password" name="current_password">
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <input type="text" placeholder="New Password" class="form-control w-50" id="new_password" name="new_password">
+                                    </div>
+                                    <div class="form-group form-inline mb-5">
+                                        <input type="text" placeholder="Confirm New Password" class="form-control w-50" id="confirm_password" name="confirm_password">
+                                        <button type="submit" class="btn btn-green ml-4 w-25">Update</button>
+                                    </div>
+                                </form>
+                                    
+                                <form action="{{ route('home.delete.user', ['id' => $user->id]) }}" method="post" class="">
+                                    @csrf
+                                    @method('put')
+                                    <div class="mb-2 sub-title">Delete your account</div>
+                                    <div class="form-group form-inline">
+                                        <input type="text" placeholder="Current Password" class="form-control w-50" id="current_password" name="current_password">
+                                        <button type="submit" class="btn btn-green ml-4 w-25">Delete</button>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
                         <div id="history" class="tab-pane">
