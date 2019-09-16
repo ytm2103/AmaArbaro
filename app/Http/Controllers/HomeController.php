@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-
 class HomeController extends Controller
 {
     /**
@@ -40,7 +39,7 @@ class HomeController extends Controller
         $user->name = $request->name; //画面で入力されたnameを代入
         $user->save(); //DBに保存
 
-        return redirect()->route('home')->with('update_message', '更新が完了しました');
+        return redirect()->route('home')->with('update_message', 'Update completed.');
         //一覧ページにリダイレクト+フラッシュメッセージ（トースト）
     }
 
@@ -51,7 +50,7 @@ class HomeController extends Controller
         $user->email = $request->email; //画面で入力されたemailを代入
         $user->save(); //DBに保存
 
-        return redirect()->route('home')->with('update_message', '更新が完了しました'); //一覧ページにリダイレクト
+        return redirect()->route('home')->with('update_message', 'Update completed.'); //一覧ページにリダイレクト
     }
 
     public function updatePassword(int $id, Request $request)
@@ -70,7 +69,7 @@ class HomeController extends Controller
 
                 // dd($request->new_password);
                 
-                return redirect()->route('home')->with('update_message', '更新が完了しました'); //一覧ページにリダイレクト
+                return redirect()->route('home')->with('update_message', 'Update completed.'); //一覧ページにリダイレクト
 
             } else {
                 echo 'new_password or confirm_password error';
