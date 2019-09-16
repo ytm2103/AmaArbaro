@@ -24,7 +24,9 @@
                 <a href="{{ url('/') }}">
                     <img src="{{ asset('/img/logo.png')}}" class="ticon">
                 </a>
+                    <a href="{{ url('/') }}">
                <div class="name">Ama Arbaro</div>
+                </a>
                <div class="zero">Make donations/contributions<br>with ZERO price</a></div>
             </div>
             <!--ヘッダー右側部分-->

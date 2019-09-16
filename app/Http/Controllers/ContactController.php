@@ -7,7 +7,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\models\Contact;
-use App\Mail;
+use App\Http\Controllers\Mail;
 
 
 class ContactController extends Controller
