@@ -10,4 +10,5 @@ class Donation extends Model
     {
         return $this->belongsTo('App\User');
     }
+
 }
