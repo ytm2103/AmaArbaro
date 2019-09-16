@@ -36,22 +36,32 @@ class HomeController extends Controller
     {
         $user = User::find($id);
 
-        $user->name = $request->name; //画面で入力されたnameを代入
-        $user->save(); //DBに保存
-
-        return redirect()->route('home')->with('update_message', 'Update completed.');
-        //一覧ページにリダイレクト+フラッシュメッセージ（トースト）
+        if (isset($request->name)) {
+            $user->name = $request->name; //画面で入力されたnameを代入
+            $user->save(); //DBに保存
+            return redirect()->route('home')->with('update_message', 'Update completed.');
+            //一覧ページにリダイレクト+フラッシュメッセージ（トースト）
+        } else {
+            return redirect()->route('home')->with('error_message', 'Name is blank.');
+            //Myページにリダイレクト+エラートースト
+        }
     }
 
     public function updateEmail(int $id, Request $request)
     {
         $user = User::find($id);
 
-        $user->email = $request->email; //画面で入力されたemailを代入
-        $user->save(); //DBに保存
+        if (isset($request->email)) {
+            $user->email = $request->email; //画面で入力されたemailを代入
+            $user->save(); //DBに保存
 
-        return redirect()->route('home')->with('update_message', 'Update completed.');
-        //Myページにリダイレクト+トースト
+            return redirect()->route('home')->with('update_message', 'Update completed.');
+            //Myページにリダイレクト+トースト
+        } else {
+            return redirect()->route('home')->with('error_message', 'Email is blank.');
+            //Myページにリダイレクト+エラートースト
+        }
+        
     }
 
     public function updatePassword(int $id, Request $request)
@@ -63,16 +73,11 @@ class HomeController extends Controller
         { 
             if ($request->new_password == $request->confirm_password)
             { 
-
                 $request->user()->fill([
                     'password' => Hash::make($request->new_password)
                 ])->save();
-
-                // dd($request->new_password);
-                
                 return redirect()->route('home')->with('update_message', 'Update completed.');
                 //Myページにリダイレクト+トースト
-
             } else {
                 return redirect()->route('home')->with('error_message', 'New password or confirm password error.'); //一覧ページにリダイレクト
             }
