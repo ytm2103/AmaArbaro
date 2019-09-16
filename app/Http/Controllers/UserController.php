@@ -9,6 +9,6 @@ class UserController extends Controller
 {
     public function getLogout(){
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('welcome')->with('success_message', 'Logout');
         }
 }

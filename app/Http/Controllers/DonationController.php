@@ -10,12 +10,7 @@ use Carbon\Carbon; // 追加
 class DonationController extends Controller
 {
     public function index() {
-        //diariesテーブルのデータを全件取得
-        //useしてるDiaryのallメソッドを実施
-        //all()はテーブルのデータを全て取得するメソッド
-        // $donations = Donation::all(); 
-        // dd($donations); 
-        //var_dump()とdie()を合わせたメソッド。変数の確認 + 処理のストップ
+
        
     }
 
@@ -29,6 +24,6 @@ class DonationController extends Controller
         $donation->updated_at = Carbon::now(); //画面で入力されたタイトルを代入
         $donation->save();
 
-     return redirect()->route('welcome')->with('done', 'かしわぎです！！'); //welcomeページにリダイレクト
+     return redirect()->route('welcome')->with('success_message', 'Thank you for your donation!'); //welcomeページにリダイレクト
     }
 }

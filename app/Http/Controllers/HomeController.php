@@ -39,7 +39,7 @@ class HomeController extends Controller
         if (isset($request->name)) {
             $user->name = $request->name; //画面で入力されたnameを代入
             $user->save(); //DBに保存
-            return redirect()->route('home')->with('update_message', 'Update completed.');
+            return redirect()->route('home')->with('success_message', 'Update completed.');
             //一覧ページにリダイレクト+フラッシュメッセージ（トースト）
         } else {
             return redirect()->route('home')->with('error_message', 'Name is blank.');
@@ -55,7 +55,7 @@ class HomeController extends Controller
             $user->email = $request->email; //画面で入力されたemailを代入
             $user->save(); //DBに保存
 
-            return redirect()->route('home')->with('update_message', 'Update completed.');
+            return redirect()->route('home')->with('success_message', 'Update completed.');
             //Myページにリダイレクト+トースト
         } else {
             return redirect()->route('home')->with('error_message', 'Email is blank.');
@@ -71,12 +71,12 @@ class HomeController extends Controller
 
         if (Hash::check($request->current_password, $user->password))
         { 
-            if ($request->new_password == $request->confirm_password)
+            if ($request->new_password === $request->confirm_password && isset($request->new_password))
             { 
                 $request->user()->fill([
                     'password' => Hash::make($request->new_password)
                 ])->save();
-                return redirect()->route('home')->with('update_message', 'Update completed.');
+                return redirect()->route('home')->with('success_message', 'Update completed.');
                 //Myページにリダイレクト+トースト
             } else {
                 return redirect()->route('home')->with('error_message', 'New password or confirm password error.'); //一覧ページにリダイレクト
@@ -85,22 +85,18 @@ class HomeController extends Controller
             return redirect()->route('home')->with('error_message', 'Current password error.');
             //Myページにリダイレクト+トースト
         }
-
     }
 
     public function deleteUser(int $id, Request $request)
     {
-        
         $user = User::find($id);
 
         if (Hash::check($request->current_password, $user->password))
         { 
             $user->delete();
-            return redirect('/');
-            
+            return redirect()->route('welcome')->with('success_message', 'User deleted.');
         } else {
-            echo 'current_password error';
+            return redirect()->route('home')->with('error_message', 'Current password error.');
         }
-
     }
 }

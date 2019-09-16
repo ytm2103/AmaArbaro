@@ -591,8 +591,12 @@
             <div class="modal_link"><a   data-target="modal2" data-price="10" class="modal_switch hoge"><span>$10</span></a></div>
             <div class="modal_link"><a  data-target="modal2" data-price="50" class="modal_switch hoge"><span>$50</span></a></div>
             <div class="modal_link"><a   data-target="modal2" data-price="100" class="modal_switch hoge"><span>$100</span></a></div>
-        </div>   
+        </div>  
+        @if (Auth::check())
+
+        @else
         <a href="http://localhost:8000/login" id="log" >Log in your account.></a>
+        @endif 
  </div>
 </div>
 
@@ -602,19 +606,16 @@
     
     <div class="link_area">
             <p>{{ session('done') }}</p>
-            <h2>決済画面（仮）</h2>
+            <h2>Confirm your donation</h2>
             <section class="container m-5">
         <div class="row justify-content-center">
             <div class="col-8">
                 <form action="{{ route('donation.store') }}"  method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="title">amount</label>
-                        <input readonly type="text" class="form-control" name="title" id="title" />
-                    </div>
-                    <div class="text-right">
-                   
-                        <button  type="submit" class="btn btn-primary">決済</button>
+                        <label for="title">Amount: $ </label>
+                        <input readonly type="text" class="form-control" name="title" id="title"><br>
+                        <button type="submit" class="btn btn-green mt-5">Donate</button>
                     </div>
                 </form>
             </div>

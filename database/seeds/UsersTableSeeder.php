@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon; // 追加
 use Illuminate\Support\Facades\DB; // 追加
+use Illuminate\Support\Facades\Hash;
 
 class UsersTableSeeder extends Seeder
 {
