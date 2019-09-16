@@ -12,7 +12,7 @@
 
     <table class="table table-bordered">
     <tr>
-    <td class="table-secondary" style="width:20%">mail address</td>
+    <td class="table-secondary" style="width:20%">email</td>
     <td>{{ $email }}</td>
     </tr>
     <tr>

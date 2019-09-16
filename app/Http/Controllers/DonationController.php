@@ -29,6 +29,6 @@ class DonationController extends Controller
         $donation->updated_at = Carbon::now(); //画面で入力されたタイトルを代入
         $donation->save();
 
-     return redirect()->route('welcome'); //welcomeページにリダイレクト
+     return redirect()->route('welcome')->with('done', 'かしわぎです！！'); //welcomeページにリダイレクト
     }
 }

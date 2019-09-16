@@ -601,7 +601,7 @@
  <div class="overLay modalClose"> </div> 
     
     <div class="link_area">
-        
+            <p>{{ session('done') }}</p>
             <h2>決済画面（仮）</h2>
             <section class="container m-5">
         <div class="row justify-content-center">

@@ -158,13 +158,13 @@
      Nobis doloribus mollitia animi qui error asperiores, accusantium, ipsam veniam eos beatae, veritatis maiores nostrum?<br>
       Quisquam consequatur quam iusto tenetur minus ab.</p>
 
-    <h1 class="title">Your opinion is worth it. / Share your opinion</h1>
+    <h1 class="title"> Share your opinion</h1>
     
 
     <div class="container"  >
         
 <div class="row" >
-    <h1>Contact Us</h1>
+ 
 </div>
 <div class="row">
     <form action="{{ route('confirm') }}" method="post">
