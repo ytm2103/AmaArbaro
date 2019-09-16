@@ -4,7 +4,12 @@
  <script defer src="{{ asset('/js/news.js') }}"></script>
  @section('content')
  <h1>Make donate with ZERO PRICE</h1>
-
+ <div class="title">We believe Love can be the only way to save the world.<br>
+If you want to save the earth without money.<br>
+If you sympathize with someone or something when you see a miserable news, you want help them.<br>
+Just share your feelings or news.<br>
+Just do it whatever you can do right now!<br></div>
+<br>
 <div class="container">
     <div class="item">
     <blockquote class="twitter-tweet" data-theme="dark" data-width="400" data-height="1200"><p lang="en" dir="ltr">Malaysia complains to Indonesia demanding action over forest fires <a href="https://t.co/BrfOV0HQ8f">https://t.co/BrfOV0HQ8f</a></p>&mdash; Guardian Environment (@guardianeco) <a href="https://twitter.com/guardianeco/status/1170001980862816256?ref_src=twsrc%5Etfw">September 6, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

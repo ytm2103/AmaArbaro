@@ -38,7 +38,9 @@
     }
     .box-img1{
         width: 50%;
+        height: 40%;
         float:right;
+        box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
     }
     .contents1{
         color:#37654E;
@@ -48,16 +50,25 @@
     }
     .box-img2{
         width: 50%;
+        height: 40%;
         float:left;
+        box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
     }
     .contents{
         color:#37654E;
         text-align:center;
     }
     .box-img3{
+
         height: 600px;
         width: 100%;
         object-fit:contain;
+    }
+    .box-img4{
+        box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+        width: 70%;
+        height: 40%;
+
     }
     .title{
         color:#37654E;
@@ -78,78 +89,102 @@
   
 
     <h1 class="title1">About Us</h1>
+        <br>
+        <br>
+        <br>
     <img src="{{ asset('/img/mac.jpg')}}" class="box-img1"　alt="mac">
-   
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     <div class="contents1">
-        私達は現在ITを学んでいる学生で構成されたグループです。<br>
-        私達はまだ学生で、できることは少ないかもしれませんが、
-        世界中のことを知れ、世界中の人と繋がれるインターネットを通じて地球のためになにかできないかと思い
-        このアプリケーションを作りました。<br>
-        そしてこの美しい地球を守るためになにかできないかと同じ思いをもつ同士のために
-        このウェブサイトを運営しています。<br>
+    AmaArbaro is composed of students are learning IT(Information Technology)group .<br>
+    We are not sure what we can do because we are just students however we believe we can do even small things for the Earth through internet where people can know anythings and communicate with anyones.<br>
+    This is the main reason this web site exist.<br>
+    AmaArbaro administers this site for you who believe we can do something for protecting this beautiful earth.
     </div>
+        <br>
+        <br>
+        <br>
     
     <img src="{{ asset('/img/tree.jpg')}}" class="box-img2" alt="森を守る" title="protectrre">
+        <br>
+        <br>
+        <br>
     <p class="contents">
-        現在は森林を保護するためにNGO団体として活動しており、
-        世界（）ヶ国で、募った寄付金により実際に木を植えています。<br>
-        当初は５人で結成された小さなグループでしたが世界中に構成員を広げながら成長しています。<br>
+        <br>
+        <br>
+        <br>
+    We work as NGO(non-governmental organizations) and plant trees around the world by contribution.<br>
+    AmaArbaro was a small group that consist of only 5 students when we start this work but collaborators are increased, and we are still growing around the world.<br>
     </p>
-    
-    <p class="contents"><img src="{{ asset('/img/sample.png')}}" alt="データ" title="graph" class="box-img3">
-        現在森林の面積は（実際のデータ）減少しており、
-        人類だけでなく生物が生きるために必要な貴重な資源が失われつつあります。<br>
-        しかし、近年、環境問題がたくさん取り上げられているにも関わらず
-        環境の破壊をやめようとしません。<br>
-        なぜなら彼らは彼らの生活の水準をさげることを許さないからです。<br>
-        ならばせめて木を植えて森林を増やしませんか？<br>
+        <br>
+        <br>
+        <br>
+    <p class="contents">
+    However people don’t change anythings because people can not accept their quality of daily lives decline.<br>
+    <br>
+    If that's the case, why don’t you even plant trees?
     </p>
-
-    <p class="contents"><img src="sample.png" alt="木か実際の画像" title="tree" class="image">
-        木は一本5000円（仮）で（どこ）に植えることができます。<br>
-        1人で払うには高いと感じますか？支払い先や方法が難易度が高いと感じますか？<br>
-        それならば私たちと一緒に木を植えませんか？<br>
-        地球を救うのに難しすぎることなんてないはずです<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <p class="contents"><img src="{{ asset('/img/tree.form.jpg')}}" alt="木の実際の画像" title="tree" class="box-img4">
+        <br>
+        <br>
+        <br>
+    The cost to plant a tree is $50.<br>
+    Do you feel it’s expensive?<br>
+    Do you feel difficult payment method?<br>
+    You can donate any amounts and simply for planting tree, saving the earth.<br>
     </p>
 
     <h1 class="title">Vision</h1>
-    <p class="contents">誰しもが当事者になり、問題を定義し、助け合い、行動し、実現できる社会を実現する</p>
+    <p class="contents">
+    Be the environment everyone should have a sense of ownership to solve problems.</p>
 
     <h1 class="title">Mission</h1>
-    <p class="contents">我々はゼロプライスポリシー（シェアページに飛ぶ。説明）を持っています。<br>
-        誰しもが愛のある行動をすぐに、いつでも、シンプルに、拡散でき、実行できる環境を提供する
-    </p>
+    <p class="contents">We have ZERO price policy.<br>
+    To provide the environment everyone can take action whenever they want.<br>
+
     
     <h1 class="title">Our Works/History</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloribus mollitia animi qui error asperiores, accusantium, ipsam veniam eos beatae, veritatis maiores nostrum? Quisquam consequatur quam iusto tenetur minus ab.</p>
+    <p class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+     Nobis doloribus mollitia animi qui error asperiores, accusantium, ipsam veniam eos beatae, veritatis maiores nostrum?<br>
+      Quisquam consequatur quam iusto tenetur minus ab.</p>
 
-    <h1 class="title">あなたの意見は価値があります。/あなたの意見をシェア</h1>
+    <h1 class="title">Your opinion is worth it. / Share your opinion</h1>
     
 
     <div class="container"  >
         
 <div class="row" >
-    <h1>お問い合わせ</h1>
+    <h1>Contact Us</h1>
 </div>
 <div class="row">
     <form action="{{ route('confirm') }}" method="post">
     @csrf
     <div class="form-group">
-        <label for="InputEmail">メールアドレス</label>
+        <label for="InputEmail">email</label>
         <input type="email" name="email" class="form-control" id="InputEmail" value="{{ old('email') }}">
         @if($errors->has('email'))
             <p class="text-danger">{{ $errors->first('email')}}</p>
         @endif
     </div>
     <div class="form-group">
-        <label for="InputSubject">件名</label>
+        <label for="InputSubject">subject</label>
         <input type="text" name="subject" class="form-control" id="InputSubject" value="{{ old('subject') }}">
         @if($errors->has('subject'))
             <p class="text-danger">{{ $errors->first('subject')}}</p>
         @endif
     </div>
     <div class="form-group">
-        <label for="InputMessage">メッセージ</label>
+        <label for="InputMessage">message</label>
         <textarea name="message" id="InputMessage" class="form-control" cols="40" rows="4">
         {{ old('message') }}
         </textarea>
@@ -158,7 +193,7 @@
         @endif
     </div>
     @csrf
-    <button type="submit" name="action" class="btn btn-primary" value="sent">送信する</button>
+    <button type="submit" name="action" class="btn btn-primary" value="sent">send</button>
     </form>
 </div>
 </div>

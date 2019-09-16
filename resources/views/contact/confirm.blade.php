@@ -5,22 +5,22 @@
 @section('content')
 
 <div class="row">
-    <h1>お問い合わせ内容の確認</h1>
+    <h1>Confirmation of inquiries</h1>
 </div>
 <div class="row"     margin-left: 0px;>
-    <p>下記、お問い合わせ内容にて送信します。よろしければ「送信」ボタンを押して下さい。</p>
+    <p>The following will be sent as an inquiry. If you like, please press the “Send” button.</p>
 
     <table class="table table-bordered">
     <tr>
-    <td class="table-secondary" style="width:20%">メールアドレス</td>
+    <td class="table-secondary" style="width:20%">mail address</td>
     <td>{{ $email }}</td>
     </tr>
     <tr>
-    <td class="table-secondary">件名</td>
+    <td class="table-secondary">subject</td>
     <td>{{ $subject }}</td>
     </tr>
     <tr>
-    <td class="table-secondary">メッセージ</td>
+    <td class="table-secondary">message</td>
     <td>{!! nl2br(e($message)) !!}</td>
     </tr>
     </table>
@@ -30,8 +30,8 @@
         <input type="hidden" name="subject" class="form-control" id="InputSubject" value="{{ $subject }}">
         <input type="hidden" name="message" class="form-control" id="InputMessage" value="{{ $message }}">
     
-    <button type="submit" name="action" class="btn btn-primary" value="back">戻る</button>
-    <button type="submit" name="action" class="btn btn-primary" value="sent">送信</button>
+    <button type="submit" name="action" class="btn btn-primary" value="back">back</button>
+    <button type="submit" name="action" class="btn btn-primary" value="sent">sent</button>
     </form>
 </div>
 
