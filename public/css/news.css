@@ -1,13 +1,50 @@
-h1{
+h1.news_title{
   text-align: center;
-  font-size: 100px;
-}
-.container{
-    display: flex;
-    justify-content:space-around;
+  font-size: 2.75vw;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: 500;
 }
 
-.title{
+.container{
+    width: 100%;
+}
+
+.news_subtitle{
   text-align: center;
-  font-size: 30px;
+  font-weight: 300;
+  font-size: 1.25vw;
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+.orange {
+  color: #EDC202;
+}
+
+.timeline_section {
+  margin-top: 50px;
+}
+
+.card_section {
+  margin-top: 50px;
+}
+
+.twitter-timeline, .twitter-tweet {
+  box-shadow: 2px 2px 5px #cccccc;
+}
+
+ul {
+  list-style: none;
+}
+
+.boxa {
+  float:left;
+  margin-right: 5%;
+  margin-top: 50px;
+}
+
+.box {
+  width: 90%;
+  margin: 0 auto;
 }

@@ -247,6 +247,7 @@ body {
   color: #37654E;
   font-size: 1rem;
   justify-content: center;
+  clear: both;
 }
 
 /* 共通 */
