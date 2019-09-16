@@ -85,6 +85,7 @@ class DonationsTableSeeder extends Seeder
                 'user_id' => $donation['user_id'],
                 'project_id' => $donation['project_id'],
                 'created_at' => DateTime::dateTimeThisDecade(),
+                'updated_at' => Carbon::now(),
             ]);
         }
     }
