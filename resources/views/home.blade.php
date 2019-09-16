@@ -37,6 +37,12 @@
                                                 toastr.success('{{ session('update_message') }}');
                                         });
                                     @endif
+
+                                    @if (session('error_message'))
+                                        $(function () {
+                                                toastr.error('{{ session('error_message') }}');
+                                        });
+                                    @endif
                                 </script>
 
                                 {{-- @if (session('update_message'))

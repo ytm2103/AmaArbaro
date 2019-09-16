@@ -50,7 +50,8 @@ class HomeController extends Controller
         $user->email = $request->email; //画面で入力されたemailを代入
         $user->save(); //DBに保存
 
-        return redirect()->route('home')->with('update_message', 'Update completed.'); //一覧ページにリダイレクト
+        return redirect()->route('home')->with('update_message', 'Update completed.');
+        //Myページにリダイレクト+トースト
     }
 
     public function updatePassword(int $id, Request $request)
@@ -69,13 +70,15 @@ class HomeController extends Controller
 
                 // dd($request->new_password);
                 
-                return redirect()->route('home')->with('update_message', 'Update completed.'); //一覧ページにリダイレクト
+                return redirect()->route('home')->with('update_message', 'Update completed.');
+                //Myページにリダイレクト+トースト
 
             } else {
-                echo 'new_password or confirm_password error';
+                return redirect()->route('home')->with('error_message', 'New password or confirm password error.'); //一覧ページにリダイレクト
             }
         } else {
-            echo 'current_password error';
+            return redirect()->route('home')->with('error_message', 'Current password error.');
+            //Myページにリダイレクト+トースト
         }
 
     }
