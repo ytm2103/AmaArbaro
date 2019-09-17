@@ -9,6 +9,11 @@
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
 
+    <!-- toast -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
 
@@ -17,6 +22,21 @@
     <title>AmaArbaro @yield('title')</title>
     </head>
     <body>
+        {{-- toast --}}
+        <script>
+            @if (session('success_message'))
+                $(function () {
+                        toastr.success('{{ session('success_message') }}');
+                });
+            @endif
+
+            @if (session('error_message'))
+                $(function () {
+                        toastr.error('{{ session('error_message') }}');
+                });
+            @endif
+        </script>
+
         <header>
         <div class="header">
            <!--ヘッダー左側部分-->
