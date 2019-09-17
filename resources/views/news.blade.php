@@ -10,7 +10,7 @@
     <div class="news_subtitle">We believe Love can be the only way to save the world.<br>
     If you want to save the earth without money.<br>
     If you sympathize with someone or something <br>when you see a miserable news, you want help them.<br>
-    Just share your feelings or news.<br>
+    Just <span class="red">share</span> your feelings or news.<br>
     Just do it whatever you can do right now!</div>
 
     <div class="container timeline_section">

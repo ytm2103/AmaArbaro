@@ -22,6 +22,11 @@ h1.news_title{
   color: #EDC202;
 }
 
+.red {
+  color: #f01d1d;
+  font-weight: 400;
+}
+
 .timeline_section {
   margin-top: 50px;
 }
