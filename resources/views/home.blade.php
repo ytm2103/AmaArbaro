@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
 @section('content')
 <div class="container mt-4">
     <div class="row justify-content-center">
@@ -30,20 +26,6 @@
                     <div class="tab-content">
                         <div id="profile" class="tab-pane active">
                             <div class="m-4 p-4">
-
-                                <script>
-                                    @if (session('update_message'))
-                                        $(function () {
-                                                toastr.success('{{ session('update_message') }}');
-                                        });
-                                    @endif
-                                </script>
-
-                                {{-- @if (session('update_message'))
-                                    <div class="update_message">
-                                        {{ session('update_message') }}
-                                    </div>
-                                @endif --}}
                                 
                             <form action="{{ route('home.update.name', ['id' => $user->id]) }}" method="post" class="">
                                     @csrf
