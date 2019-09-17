@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/news', function() {
-    return view('news');
-});
+Route::get('/news', 'NewsController@index')->name('news');
 
 Auth::routes();
 
@@ -28,10 +26,6 @@ Route::put('/home/{id}/update_name', 'HomeController@updateName')->name('home.up
 Route::put('/home/{id}/update_email', 'HomeController@updateEmail')->name('home.update.email'); // 更新処理
 Route::put('/home/{id}/update_password', 'HomeController@updatePassword')->name('home.update.password'); // 更新処理
 Route::put('/home/{id}/delete_user', 'HomeController@deleteUser')->name('home.delete.user'); // 削除処理
-
-Route::get('/news', function() {
-    return view('news');
-});
 
 Route::get('/logout',[
     'uses' => 'UserController@getLogout',
