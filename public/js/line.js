@@ -11,6 +11,9 @@ anime({
   }
 });
 
+
+
+
 // 押されたボタン取得
 let btns = document.getElementsByClassName('hoge');
 

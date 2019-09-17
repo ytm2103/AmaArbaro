@@ -53,8 +53,7 @@
                 <div class="header-right">
                     <a href="http://twitter.com/share?"><img src="{{ asset('/img/logo_twitter.png')}}" id="icon" class="twitter_button" ontouchstart=""></a>
                     <a href="http://www.facebook.com/share.php?u="><img src="{{ asset('/img/logo_facebook.png')}}" id="icon" class="facebook_button" ontouchstart=""></a>
-                    <a href="{{ url('contact/form') }}"><div class="about">About us</div></a>
-                    
+                    <a href="{{ url('contact/form') }}"><div class="about">About us</div></a>                    
                     <div>
                         @if (Route::has('login'))
                             <div class="menu">

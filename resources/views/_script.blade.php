@@ -32,12 +32,16 @@ $(function(){
   
      // modalをフェードインで表示
      $(modal).fadeIn();
-  
+
+          //modal_bgがクリックされたらmodal_box,modal_bgがフェードアウトされる
+          $('.modal_bg, .modal_close').off().click(function(){
+        $('.modal_box').fadeOut();
+        $('.modal_bg').fadeOut('slow',function(){
+            $('.modal_bg').remove();
+        });
+    });
      
-     $('.close').on('click', function() {
-       $('.overLay modalClose, .modal_box').fadeOut();
-     });
-   
+
   
      // ウィンドウがリサイズされたらモーダルの位置を再計算する
      $(window).on('resize', function(){

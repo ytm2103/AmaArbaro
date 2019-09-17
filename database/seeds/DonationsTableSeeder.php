@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon; // 追加
 use Illuminate\Support\Facades\DB; // 追加
-use Faker\Provider\DateTime;
 
 class DonationsTableSeeder extends Seeder
 {
@@ -84,7 +83,7 @@ class DonationsTableSeeder extends Seeder
                 'amount' => $donation['amount'],
                 'user_id' => $donation['user_id'],
                 'project_id' => $donation['project_id'],
-                'created_at' => DateTime::dateTimeThisDecade(),
+                'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
         }
