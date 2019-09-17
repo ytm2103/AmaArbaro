@@ -590,7 +590,7 @@
         
         @if (Auth::check())
         @else
-        <a href="http://localhost:8000/login" id="log" >Log in your account.></a>
+        <a href="{{ url('/login') }}" id="log" >Log in your account.></a>
         @endif
         
  </div>
