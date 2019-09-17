@@ -1,0 +1,44 @@
+body{
+    background-color: #ffffff;
+}
+
+.btn-green {
+    background-color: #37654E;
+    color: #ffffff;
+}
+
+.sub-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #37654E;
+}
+
+.border-green {
+    border: solid 1px #37654E;
+}
+
+.font-green {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: #37654E;
+}
+
+.strong {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #37654E;
+}
+
+.form-control::-webkit-input-placeholder { /* Edge */
+    color: #aaaaaa;
+  }
+  
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #aaaaaa;
+}
+
+.form-control::placeholder {
+    color: #aaaaaa;
+}

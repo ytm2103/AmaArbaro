@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+.header{
+  justify-content: space-between;
+  display: flex;
+  max-width: 100%;
+}
+/*ヘッダー左側*/
+
+.header-left  {
+  display: flex;
+  color: #37654E;
+  align-items: center;
+}
+
+a.link{
+  margin: 0 -10px;
+  text-align: left;
+   color: #37654E;
+}
+
+@media only screen and (min-width:320px) {  /* 中画面 */
+  .ticon {
+    height: 30px;
+    padding: 15px 0px 25px 10px;
+  }
+}
+  
+@media only screen and (min-width:860px) {  /* 大画面 */
+  .ticon  {
+    height: 60px;
+    padding: 15px 0px 25px 10px;
+  }
+}
+
+
+@media only screen and (min-width:320px) {  /* マイナーブレークポイント */
+  .name {
+    font-size: 15px;
+    text-align:left;
+    font-family: 'Roboto', sans-serif;
+    padding-right: 10px;
+    padding-left: 15px;
+  }
+}
+@media only screen and (min-width:860px) {  /* 中画面、大画面 */
+  .name {
+    text-align:left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    padding-right: 15px;
+    padding-left: 5px;
+  }
+}
+
+@media only screen and (min-width:320px) {  /* マイナーブレークポイント */
+  .zero {
+    border-left: solid 1px;
+    padding-left: 15px;
+    font-size: 5%;
+  }
+}
+@media only screen and (min-width:860px) {  /* 中画面、大画面 */
+  .zero {
+    border-left: solid 1px;
+    padding-left: 8px;
+    font-size: 80%;
+  }
+}
+
+/*ヘッダー右側*/
+.header-right{
+  display: flex;
+  color: #37654E;
+  align-items: center;
+
+}
+
+
+@media only screen and (min-width:320px) {  /* 中画面 */
+  #icon {
+    height: 20px;
+    display:flex;
+    margin: auto;
+  }
+}
+  
+@media only screen and (min-width:860px) {  /* 大画面 */
+  #icon {
+    height: 50px;
+    padding-right: 5px;
+    display:flex;
+    margin: auto;
+  }
+}
+
+
+
+@media only screen and (min-width:320px) {  /* 中画面 */
+  .about {
+    font-size: 16px;
+    padding-right: 10px;
+    border-right: solid 1px;
+    padding-left: 10px;
+    font-size: 8px;
+
+  }
+}
+  
+@media only screen and (min-width:860px) {  /* 大画面 */
+  .about {
+    font-size: 16px;
+    padding-right: 40px;
+    border-right: solid 1px;
+    padding-left: 10px;
+  }
+}
+
+/*ログイン機能*/
+@media only screen and (min-width:320px) {  /* 中画面 */
+  .menu {
+    display: flex;
+    font-size: 8px;
+  }
+}
+  
+@media only screen and (min-width:860px) {  /* 大画面 */
+  .menu {
+    display: flex;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+}
+
+/*アイコンのホバー動作*/
+/* twitter画像をホバーした */
+img.twitter_button:hover{
+  
+    /* 透明度を上げることで、画像の色を薄く見せる。*/
+    opacity:0.5;
+  
+    /* リンクをホバーしたときのカーソルにする。*/
+    cursor: pointer;
+}
+  
+/* twitter画像をクリックした瞬間 */
+img.twitter_button:active{
+  
+    /* 要素を若干下に下げることで、押した感じを出す。*/
+  
+    /* 今いる位置から相対的に3px下に配置する。*/
+    position: relative;
+    top: 3px;
+  
+}
+/*facebook*/
+img.facebook_button:hover{
+  
+    /* 透明度を上げることで、画像の色を薄く見せる。*/
+    opacity:0.5;
+  
+    /* リンクをホバーしたときのカーソルにする。*/
+    cursor: pointer;
+}
+  
+/* twitter画像をクリックした瞬間 */
+img.facebook_button:active{
+  
+    /* 要素を若干下に下げることで、押した感じを出す。*/
+  
+    /* 今いる位置から相対的に3px下に配置する。*/
+    position: relative;
+    top: 3px;
+  
+}
+
+/*instagram*/
+img.instagram_button:hover{
+  
+    /* 透明度を上げることで、画像の色を薄く見せる。*/
+    opacity:0.5;
+  
+    /* リンクをホバーしたときのカーソルにする。*/
+    cursor: pointer;
+}
+  
+/* twitter画像をクリックした瞬間 */
+img.instagram_button:active{
+  
+    /* 要素を若干下に下げることで、押した感じを出す。*/
+  
+    /* 今いる位置から相対的に3px下に配置する。*/
+    position: relative;
+    top: 3px;
+  
+}
+/*hover処理はここまで*/
+
+
+
+
+/*ここからモーダル表示*/
+body {
+  position:relative;
+}
+@media only screen and (min-width:360px) {  /* 中画面 */
+  a {
+    display:flex;
+    margin:auto;
+    text-align:center;
+    text-decoration:none;
+    padding-left: 10px;
+    color: #37654E;
+  }
+}
+  
+@media only screen and (min-width:860px) {  /* 大画面 */
+  a {
+  display:flex;
+  margin:auto;
+  text-align:center;
+  text-decoration:none;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #37654E;
+  }
+}
+
+/*ここまでがモーダル表示*/
+/*画像*/
+.tree{
+  max-width: 35%;
+  margin: 0 auto;
+}
+
+
+
+/*footer*/
+#foot{
+  margin:0%;
+  max-width: 25%;
+  padding-top: 30px;
+}
+
+.footer{
+  display: flex;
+  color: #37654E;
+  font-size: 1rem;
+  justify-content: center;
+  clear: both;
+}
+
+/* 共通 */
+
+html, body{
+  font-family: 'Roboto', sans-serif;
+  color: #37654E;
+}
