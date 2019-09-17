@@ -27,7 +27,7 @@
                     <a href="{{ url('/') }}">
                <div class="name">Ama Arbaro</div>
                 </a>
-               <div class="zero">Make donations/contributions<br>with ZERO price</a></div>
+               <div class="zero">Make donations<br>with ZERO price</a></div>
             </div>
             <!--ヘッダー右側部分-->
             <div class="header-right">

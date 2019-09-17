@@ -158,7 +158,7 @@
      Nobis doloribus mollitia animi qui error asperiores, accusantium, ipsam veniam eos beatae, veritatis maiores nostrum?<br>
       Quisquam consequatur quam iusto tenetur minus ab.</p>
 
-    <h1 class="title"> Share your opinion</h1>
+    <h1 class="title"> Contact</h1>
     
 
     <div class="container"  >
@@ -192,7 +192,7 @@
             <p class="text-danger">{{ $errors->first('message')}}</p>
         @endif
     </div>
-    @csrf
+   
     <button type="submit" name="action" class="btn btn-primary" value="sent">send</button>
     </form>
 </div>

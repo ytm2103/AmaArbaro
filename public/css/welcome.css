@@ -37,6 +37,7 @@
 }
 
 .modal_bg {
+
   position: fixed;
   top: 0;
   left: 0;
@@ -116,7 +117,6 @@
 .link_area ul li.modal_link:last-child a {
     float: none;
 }
-
 }
 
 
@@ -126,10 +126,12 @@
 }
 
 .miki{
+ 
   stroke-width:10;
 }
 
 .eda{
+ 
   stroke-width:10;
 }
 

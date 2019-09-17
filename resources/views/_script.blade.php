@@ -35,7 +35,7 @@ $(function(){
   
      
      $('.close').on('click', function() {
-       $('.overLay modalClose, .modal_box').fadeOut();
+       $('.overLay modalClose', '.modal_bg').fadeOut();
      });
    
   
