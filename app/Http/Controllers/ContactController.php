@@ -6,8 +6,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
-use App\models\Contact;
-use App\Http\Controllers\Mail;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Contact as Chinko;
+use  App\Sent;
+
+
 
 
 class ContactController extends Controller
@@ -27,6 +30,7 @@ class ContactController extends Controller
     }
      public function sent(ContactRequest $request){
       
+
         $contact = $request->all();
         if($request->action === 'back') {
             return redirect()->route('contact')->withInput($contact);
@@ -34,8 +38,18 @@ class ContactController extends Controller
 
         $request->session()->regenerateToken();
         
-        Mail::to('hogehoge@gmail.com')->send(new Contact($contact));
+        //dbに保存modelファイル
 
-        return view('thanks');
+        $sent = new Sent();
+       
+        $sent->email = $request->email;
+        $sent->name = 0;
+        $sent->message = $request->message;
+        $sent->created_at = $request->created_at;
+        $sent->save();
+
+       // Mail::to('hogehoge@gmail.com')->send(new Chinko($contact));
+
+        return view('contact.thanks');
     }
 }

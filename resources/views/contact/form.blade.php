@@ -18,16 +18,7 @@
         $ php artisan serve　でサーバの起動
         -->
 <style type="text/css">
-    .top{
-       
-        font-size: 12vw;
-        width: 100%;
-        height: 100%;
-        padding:0%;
-        display: flex;
-        color:yellow;
-        background-color: #37654E;
-    }
+   
     .title1 {
         color:#37654E;
         text-align:center;
@@ -39,7 +30,6 @@
     .box-img1{
         width: 50%;
         height: 40%;
-        float:right;
         box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
     }
     .contents1{
@@ -51,7 +41,7 @@
     .box-img2{
         width: 50%;
         height: 40%;
-        float:left;
+    
         box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
     }
     .contents{
@@ -92,49 +82,37 @@
         <br>
         <br>
         <br>
-    <img src="{{ asset('/img/mac.jpg')}}" class="box-img1"　alt="mac">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <p class="contents1">
+        <img src="{{ asset('/img/mac.jpg')}}" class="box-img1"　alt="mac">
+        </p>
     <div class="contents1">
+   
     AmaArbaro is composed of students are learning IT(Information Technology)group .<br>
     We are not sure what we can do because we are just students however we believe we can do even small things for the Earth through internet where people can know anythings and communicate with anyones.<br>
     This is the main reason this web site exist.<br>
     AmaArbaro administers this site for you who believe we can do something for protecting this beautiful earth.
     </div>
-        <br>
-        <br>
-        <br>
     
-    <img src="{{ asset('/img/tree.jpg')}}" class="box-img2" alt="森を守る" title="protectrre">
+        <p class="contents1">
+        <img src="{{ asset('/img/tree.jpg')}}" class="box-img2" alt="森を守る" title="protectrre">
+            </p>
         <br>
-        <br>
-        <br>
-    <p class="contents">
-        <br>
-        <br>
-        <br>
+    <p class="contents1">
+       
     We work as NGO(non-governmental organizations) and plant trees around the world by contribution.<br>
-    AmaArbaro was a small group that consist of only 5 students when we start this work but collaborators are increased, and we are still growing around the world.<br>
-    </p>
-        <br>
-        <br>
-        <br>
-    <p class="contents">
+    AmaArbaro was a small group that consist of only 5 students when we start this work but collaborators are increased, and we are still growing around the world.<br>     
     However people don’t change anythings because people can not accept their quality of daily lives decline.<br>
-    <br>
     If that's the case, why don’t you even plant trees?
     </p>
         <br>
         <br>
         <br>
+    <p class="contents1">
+        <img src="{{ asset('/img/tree.form.jpg')}}" alt="木の実際の画像" title="tree" class="box-img4">
+    </p>
         <br>
         <br>
-        <br>
-    <p class="contents"><img src="{{ asset('/img/tree.form.jpg')}}" alt="木の実際の画像" title="tree" class="box-img4">
+    <p class="contents1">
         <br>
         <br>
         <br>
@@ -158,7 +136,7 @@
      Nobis doloribus mollitia animi qui error asperiores, accusantium, ipsam veniam eos beatae, veritatis maiores nostrum?<br>
       Quisquam consequatur quam iusto tenetur minus ab.</p>
 
-    <h1 class="title"> Share your opinion</h1>
+    <h1 class="title"> Contact</h1>
     
 
     <div class="container"  >
@@ -192,7 +170,7 @@
             <p class="text-danger">{{ $errors->first('message')}}</p>
         @endif
     </div>
-    @csrf
+   
     <button type="submit" name="action" class="btn btn-primary" value="sent">send</button>
     </form>
 </div>

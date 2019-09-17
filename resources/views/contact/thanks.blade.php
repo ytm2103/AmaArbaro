@@ -11,12 +11,12 @@
     </title>
 @section('content')
 <div class="row">
-    <h1>お問い合わせ送信完了</h1>
+    <h1>Inquiry transmission complete</h1>
 </div>
 <div class="row">
-    <p>お問い合わせありがとうございました。</p>
+    <p>Thank you for your inquiry</p>
 </div>
 <div class="row">
-    <p>ご入力いただいた内容は正しく送信されました。</p>
+    <p>Sent successfully</p>
 </div>
 @endsection
