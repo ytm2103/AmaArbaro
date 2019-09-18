@@ -4,6 +4,7 @@
   justify-content: space-between;
   display: flex;
   max-width: 100%;
+  width: 100vw;
 }
 /*ヘッダー左側*/
 
@@ -80,6 +81,7 @@ a.link{
   align-items: center;
 
 }
+
 
 
 @media only screen and (min-width:320px) {  /* 中画面 */

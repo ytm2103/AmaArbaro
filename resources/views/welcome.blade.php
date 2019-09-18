@@ -9,7 +9,9 @@
 
 <script defer src="{{ asset('/js/line.js') }}"></script>
 <!-- モーダルウィンドウを開くボタン -->
+
 <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome.css') }}">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
 @section('content')
 <div id="demoslide01" class="main_visual bg_aaa">
     <a data-target="modal1" class="modal_open"> <svg width=100% height=600px version="1.0" xmlns="http://www.w3.org/2000/svg"

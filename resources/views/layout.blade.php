@@ -59,12 +59,12 @@
                     @if (Route::has('login'))
                         <div class="menu">
                             @auth
-                                <a href="{{ url('/home') }}">My page</a>
-                                <a href="{{ route('user.logout') }}">Logout</a>
+                                <a id="menu" href="{{ url('/home') }}">My page</a>
+                                <a  id="menu" href="{{ route('user.logout') }}">Logout</a>
                             @else
-                                <a href="{{ route('login') }}">Login</a>
+                                <a  id="menu" href="{{ route('login') }}">Login</a>
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}">Sign up</a>
+                                    <a  id="menu" href="{{ route('register') }}">Sign up</a>
                                 @endif
                             @endauth
                         </div>
