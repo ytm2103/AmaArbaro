@@ -57,8 +57,9 @@ a.link{
 
 @media only screen and (min-width:320px) {  /* マイナーブレークポイント */
   .zero {
+    
     border-left: solid 1px;
-    padding-left: 15px;
+    padding-left: 8px;
     font-size: 5%;
     color: #37654E;
   }
