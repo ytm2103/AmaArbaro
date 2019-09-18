@@ -13,12 +13,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
 
     @include('._script')
 
-    <title>AmaArbaro @yield('title')</title>
+    <title>@yield('title') | AmaArbaro</title>
     </head>
     <body>
         {{-- toast --}}
@@ -37,15 +38,15 @@
         </script>
 
         <header>
-        <div class="header">
-           <!--ヘッダー左側部分-->
-           <div class="header-left">
-                <a href="{{ url('/') }}">
-                    <img src="{{ asset('/img/logo.png')}}" class="ticon">
-                </a>
-                    <a href="{{ url('/') }}">
+            <div class="header">
+            <!--ヘッダー左側部分-->
+            <div class="header-left">
+                    <a href="{{ url('/') }}">     
+                        <img src="{{ asset('/img/logo.png')}}" class="ticon">
+                    </a>
+            <a href="{{ url('/') }}">
                <div class="name">Ama Arbaro</div>
-                </a>
+             </a>
                <div class="zero">Make donations<br>with ZERO price</a></div>
             </div>
             <!--ヘッダー右側部分-->
@@ -55,34 +56,34 @@
                 <a href="{{ url('contact/form') }}"><div class="about">About us</div></a>
                 
                 <div>
-                    
-                    @if (Route::has('login'))
-                        <div class="menu">
-                            @auth
-                                <a id="menu" href="{{ url('/home') }}">My page</a>
-                                <a  id="menu" href="{{ route('user.logout') }}">Logout</a>
-                            @else
-                                <a  id="menu" href="{{ route('login') }}">Login</a>
-                                @if (Route::has('register'))
-                                    <a  id="menu" href="{{ route('register') }}">Sign up</a>
-                                @endif
-                            @endauth
-                        </div>
-                    @endif
+            
+                        @if (Route::has('login'))
+                            <div class="menu">
+                                @auth
+                                    <a href="{{ url('/home') }}">My page</a>
+                                    <a href="{{ route('user.logout') }}">Logout</a>
+                                @else
+                                    <a href="{{ route('login') }}">Login</a>
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}">Sign up</a>
+                                    @endif
+                                @endauth
+                            </div>
+                        @endif
+                    </div>
                 </div>
-            </div>
-        </div> 
-    </header>
+            </div> 
+        </header>
         <main>
             @yield('content')
         </main>
 
-    <footer class="mb-4 mt-5">
-        <div class="footer">
-         <a id="foot" href="{{ url('/terms') }}">Terms of use</a>
-         <a id="foot" href="{{ url('/privacy') }}">Privacy policy</a>
-         <p id="foot" class="ama">&copy; 2019  Ama Arbaro</p>
-        </div> 
-    </footer> 
+        <footer class="mb-4 mt-5">
+            <div class="footer">
+                <a id="foot" href="{{ url('/terms') }}">Terms of use</a>
+                <a id="foot" href="{{ url('/privacy') }}">Privacy policy</a>
+                <p id="foot" class="ama">&copy; 2019  Ama Arbaro</p>
+            </div> 
+        </footer> 
     </body>
 </html>
