@@ -1,9 +1,14 @@
 @charset "utf-8";
 
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .header{
   justify-content: space-between;
   display: flex;
   max-width: 100%;
+  width: 100vw;
 }
 /*ヘッダー左側*/
 
@@ -16,7 +21,7 @@
 a.link{
   margin: 0 -10px;
   text-align: left;
-   color: #37654E;
+  color: #37654E;
 }
 
 @media only screen and (min-width:320px) {  /* 中画面 */
@@ -36,11 +41,12 @@ a.link{
 
 @media only screen and (min-width:320px) {  /* マイナーブレークポイント */
   .name {
-    font-size: 15px;
+    font-size: 13px;
     text-align:left;
     font-family: 'Roboto', sans-serif;
     padding-right: 10px;
     padding-left: 15px;
+    color: #37654E;
   }
 }
 @media only screen and (min-width:860px) {  /* 中画面、大画面 */
@@ -50,14 +56,17 @@ a.link{
     font-size: 2em;
     padding-right: 15px;
     padding-left: 5px;
+    color: #37654E;
   }
 }
 
 @media only screen and (min-width:320px) {  /* マイナーブレークポイント */
   .zero {
+    
     border-left: solid 1px;
-    padding-left: 15px;
+    padding-left: 8px;
     font-size: 5%;
+    color: #37654E;
   }
 }
 @media only screen and (min-width:860px) {  /* 中画面、大画面 */
@@ -65,6 +74,7 @@ a.link{
     border-left: solid 1px;
     padding-left: 8px;
     font-size: 80%;
+    color: #37654E;
   }
 }
 
@@ -75,6 +85,7 @@ a.link{
   align-items: center;
 
 }
+
 
 
 @media only screen and (min-width:320px) {  /* 中画面 */
@@ -103,7 +114,7 @@ a.link{
     border-right: solid 1px;
     padding-left: 10px;
     font-size: 8px;
-
+    color: #37654E;
   }
 }
   
@@ -121,6 +132,7 @@ a.link{
   .menu {
     display: flex;
     font-size: 8px;
+    color: #37654E;
   }
 }
   
@@ -203,6 +215,17 @@ img.instagram_button:active{
 body {
   position:relative;
 }
+@media only screen and (min-width:320px) {  /* 中画面 */
+  a {
+    display:flex;
+    margin:auto;
+    text-align:center;
+    text-decoration:none;
+    padding-left: 10px;
+    color: #37654E;
+  }
+}
+
 @media only screen and (min-width:360px) {  /* 中画面 */
   a {
     display:flex;
@@ -240,6 +263,7 @@ body {
   margin:0%;
   max-width: 25%;
   padding-top: 30px;
+  color: #37654E;
 }
 
 .footer{
@@ -255,4 +279,5 @@ body {
 html, body{
   font-family: 'Roboto', sans-serif;
   color: #37654E;
+  
 }
