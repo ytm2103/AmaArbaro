@@ -4,7 +4,10 @@
     <head>
   
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/form.css') }}" rel="stylesheet" type="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="{{ asset('/js/form.js') }}"></script>
 
 
     @section('content')
@@ -17,72 +20,9 @@
         $ cd フォルダ名で移動
         $ php artisan serve　でサーバの起動
         -->
-<style type="text/css">
-   
-    .title {
-        color:#37654E;
-        text-align:center;
-    }
-    .title h1{
-        font-size: 50%;
-    }
-  
-    .contents1{
-        color:#37654E;
-        text-align:center;
-        margin: 20px; 
-        padding: 20px;
-        font-size:20px;
-    }
-  
-    
-    .contents{
-        color:#37654E;
-        text-align:center;
-        font-size:20px;
-    }
-    
-    #box-img{
-        box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
-        width: 40%;
-        height: 40%;
 
-    }
 
-    .container{
-        width:380px;
-    margin-right: auto;
-    margin-left : auto;
-    }
 
-    figure{
-        text-align: center;
-    }
-    
-    .fadein {
-  opacity : 0;
-  transform: translateY(20px);
-  transition: all 3s;
-}
-
-</style>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(function(){
-    $(window).scroll(function (){
-        $('.fadein').each(function(){
-            var targetElement = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > targetElement - windowHeight + 200){
-                $(this).css('opacity','1');
-                $(this).css('transform','translateY(0)');
-            }
-        });
-    });
-});
-</script>
 
   
 

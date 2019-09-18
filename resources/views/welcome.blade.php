@@ -576,7 +576,7 @@
 
 
 <!-- モーダル1 -->
-<div id="modal1"　 class="modal_box">
+<div id="modal1"　 class="modal_box justify-content-center">
         <div class="overLay modalClose"> </div>
                 <h2 id="make">Make your donations?</h2>
                 <div class="link_area">
@@ -599,14 +599,14 @@
 </div>
 
 <!-- モーダル2 -->
-<div id="modal2" class="modal_box" >
- <div class="overLay modalClose"> </div> 
+<div id="modal2" class="modal_box justify-content-center" >
+ <div class="overLay modalClose" > </div> 
     
     <div class="link_area">
             <p>{{ session('done') }}</p>
             <h2>Confirm your donation</h2>
-            <section class="container m-5">
-        <div class="row justify-content-center">
+            <section class="container m-5 justify-content-center">
+        <div class="row ">
             <div class="col-8">
                 <form action="{{ route('donation.store') }}"  method="POST">
                     @csrf
